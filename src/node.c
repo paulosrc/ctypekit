@@ -1,7 +1,6 @@
 #include "../include/node.h"
 
 /*
-    Função:
     Recebe a quantidade de ligações que um nó pode realizar;
     Retorna um ponteiro para um nó vazio.
 */
@@ -21,7 +20,6 @@ Node* node_init(int linkCount)
 }
 
 /*
-    Função:
     Recebe um ponteiro para um nó;
     Libera a memória alocada para o nó.
 */
