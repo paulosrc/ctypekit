@@ -2,6 +2,7 @@
 #define NODE_H
 
 #include <stdlib.h>
+#include <stdbool.h>
 
 /*
     Estrutura de Nó usado em todas as estruturas abstratas de dados.
