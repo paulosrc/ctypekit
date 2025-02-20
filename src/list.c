@@ -47,7 +47,7 @@ size_t list_size(list_t* list)
     
     if (is_list_empty(list)) return size;
 
-    node_t* aux = list->head->NEXT; // Começa após o head
+    node_t* aux = list->head->NEXT;                   // Começa após o head
     while (aux != list->tail && size < LIST_MAX_SIZE) // Termina antes do tail
     {
         size++;
@@ -96,6 +96,7 @@ node_t* get_node_at_index(list_t* list, size_t index)
     }
     return aux;
 }
+
 
 /*
     Funções auxiliares de 'list_add_node'
@@ -161,10 +162,11 @@ void list_add_node(list_t* list, void* value, size_t index)
 
     // Aloca memória para novo Nó
     node_t* newNode = (node_t*)malloc(sizeof(node_t));
+    newNode->data = malloc(sizeof(*value));
     memcpy(newNode->data, value, sizeof(*value));
     newNode->NEXT = NULL;
     newNode->PREV = NULL;
-    newNode->data = value;
+    newNode->data = value; // Atribui void* value ao novo nó
     
     // Insere nó na lista caso esteja vazia
     if (is_list_empty(list))
