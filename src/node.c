@@ -4,9 +4,9 @@
     Recebe a quantidade de ligações que um nó pode realizar;
     Retorna um ponteiro para um nó vazio.
 */
-Node* node_init(int linkCount)
+node_t* node_init(int linkCount)
 {
-    Node* newNode = (Node*)malloc(sizeof(Node));
+    node_t* newNode = (node_t*)malloc(sizeof(node_t));
     assert(newNode != NULL);
 
     newNode->data = NULL;
@@ -23,7 +23,7 @@ Node* node_init(int linkCount)
     Recebe um ponteiro para um nó;
     Libera a memória alocada para o nó.
 */
-void node_free(Node* node)
+void node_free(node_t* node)
 {
     if (node == NULL) return;
 

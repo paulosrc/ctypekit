@@ -21,9 +21,9 @@ typedef struct node
     void* data;
     void** links;
     int linkCount;
-} Node;
+} node_t;
 
-Node* node_init(int linkCount);
-void node_free(Node* node);
+node_t* node_init(int linkCount);
+void node_free(node_t* node);
 
 #endif
